@@ -27,7 +27,7 @@ for i in range(1,5):
 
     reference_fasta = os.path.join(base_directory,f"referencias/refseq_envelope_denv{i}.fasta")
     fragments_fasta = os.path.join(base_directory,f"fragmentos/fragEnv{i}.fasta")
-    seqsAlinh = os.path.join(base_directory,f"sequenciasAlinhadas/Env{i}.sam")
+    seqsAlinh = os.path.join(base_directory,f"sequenciasAlinhadas_com_minimap2/Env{i}.sam")
     alignWithMinimap2(reference_fasta, fragments_fasta, seqsAlinh)
 
 end_time = time.time()  # Fim da medição de tempo
