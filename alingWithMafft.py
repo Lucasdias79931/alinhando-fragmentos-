@@ -3,7 +3,7 @@ import os
 import time
 
 def alignWithMafft(reference_file, fragments_file, output):
-    
+
     os.makedirs(os.path.dirname(output), exist_ok=True)
 
     command = ["mafft", "--add", fragments_file, reference_file]
@@ -25,5 +25,5 @@ for i in range(1, 5):
 end_time = time.time()  # Fim da medição de tempo
 
 elapsed_time = end_time - start_time  # Tempo total em segundos
-print(f"Alinhamento concluído. Resultados salvos em {seqsAlinh}")
+
 print(f"Tempo de execução: {elapsed_time:.2f} segundos")

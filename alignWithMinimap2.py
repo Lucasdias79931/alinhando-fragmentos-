@@ -8,7 +8,7 @@ def alignWithMinimap2(reference_file, fragments_file, output_file):
 
     command = [
         "minimap2", 
-        "-a",  # Formato de saída SAM
+        "-x","asm4",  # Formato de saída SAM
         reference_file, 
         fragments_file
     ]
@@ -33,7 +33,7 @@ for i in range(1,5):
 end_time = time.time()  # Fim da medição de tempo
 
 elapsed_time = end_time - start_time  # Tempo total em segundos
-print(f"Alinhamento concluído. Resultados salvos em {seqsAlinh}")
+
 print(f"Tempo de execução: {elapsed_time:.2f} segundos")
 
 
