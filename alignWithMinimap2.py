@@ -16,7 +16,7 @@ def alignWithMinimap2(reference_file, fragments_file, output_file):
     with open(output_file, "w") as out:
         subprocess.run(command, stdout=out, check=True)
 
-    
+     
 
 ################################ Executar #########################
 base_directory = os.getcwd()
@@ -27,7 +27,7 @@ for i in range(1,5):
 
     reference_fasta = os.path.join(base_directory,f"referencias/refseq_envelope_denv{i}.fasta")
     fragments_fasta = os.path.join(base_directory,f"fragmentos/fragEnv{i}.fasta")
-    seqsAlinh = os.path.join(base_directory,f"sequenciasAlinhadas/Env{i}.fasta")
+    seqsAlinh = os.path.join(base_directory,f"sequenciasAlinhadas/Env{i}.sam")
     alignWithMinimap2(reference_fasta, fragments_fasta, seqsAlinh)
 
 end_time = time.time()  # Fim da medição de tempo
