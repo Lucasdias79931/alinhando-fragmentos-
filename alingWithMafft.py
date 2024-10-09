@@ -18,7 +18,7 @@ start_time = time.time()  # Início da medição de tempo
 for i in range(1, 5):
     reference_fasta = os.path.join(base_directory, f"referencias/refseq_envelope_denv{i}.fasta")
     fragments_fasta = os.path.join(base_directory, f"fragmentos/fragEnv{i}.fasta")
-    seqsAlinh = os.path.join(base_directory, f"sequenciasAlinhadas_com_mafft/Env{i}.sam")
+    seqsAlinh = os.path.join(base_directory, f"sequenciasAlinhadas_com_mafft/Env{i}.fasta")
 
     alignWithMafft(reference_fasta, fragments_fasta, seqsAlinh)
 
